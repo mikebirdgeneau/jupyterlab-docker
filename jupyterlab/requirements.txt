@@ -1,3 +1,5 @@
+numpy
+pandas
+matplotlib
 #netCDF4
 folium
-pandas
