@@ -1,7 +1,7 @@
 FROM python:alpine
 
 # Install required packages
-RUN apk add --update --virtual=.build-dependencies alpine-sdk nodejs ca-certificates musl-dev gcc python-dev make cmake g++ gfortran
+RUN apk add --update --virtual=.build-dependencies alpine-sdk nodejs ca-certificates musl-dev gcc python-dev make cmake g++ gfortran libpng-dev freetype-dev
 RUN apk add --update git
 
 # Install Jupyter
@@ -21,12 +21,13 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/
   rm "/etc/apk/keys/sgerrand.rsa.pub" && \
   /usr/glibc-compat/bin/localedef --force --inputfile POSIX --charmap UTF-8 C.UTF-8 || true && \
   echo "export LANG=C.UTF-8" > /etc/profile.d/locale.sh && \
-  ln -s /usr/include/locale.h /usr/include/xlocale.h && \
-  \
-  apk del glibc-i18n && \
-  apk del .build-dependencies && \
-  rm glibc-2.23-r3.apk glibc-bin-2.23-r3.apk glibc-i18n-2.23-r3.apk && \
-  rm -rf /var/cache/apk/*
+  ln -s /usr/include/locale.h /usr/include/xlocale.h
+
+# Optional Clean-up
+#  RUN apk del glibc-i18n && \
+#  apk del .build-dependencies && \
+#  rm glibc-2.23-r3.apk glibc-bin-2.23-r3.apk glibc-i18n-2.23-r3.apk && \
+#  rm -rf /var/cache/apk/*
 
 ENV LANG=C.UTF-8
 
