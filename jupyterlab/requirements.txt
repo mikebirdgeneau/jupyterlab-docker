@@ -4,3 +4,4 @@ matplotlib
 #netCDF4
 folium
 lxml
+nltk
