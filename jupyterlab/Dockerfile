@@ -15,7 +15,7 @@ RUN pip install jupyterlab && jupyter serverextension enable --py jupyterlab
 
 # Install Python Packages & Requirements (Done near end to avoid invalidating cache)
 ADD requirements.txt requirements.txt
-RUN apk add --update py-matplotlib py-numpy py-pika
+RUN apk add libgcc libstdc++ libpng tcl tk
 RUN pip install -r requirements.txt
 
 # Expose Jupyter port & cmd
