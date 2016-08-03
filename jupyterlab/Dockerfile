@@ -37,4 +37,4 @@ RUN pip install -r requirements.txt
 
 # Expose Jupyter port & cmd
 EXPOSE 8888
-CMD ["/usr/local/bin/jupyter lab"]
+CMD ["bash"]
