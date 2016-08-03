@@ -1,0 +1,7 @@
+numpy
+matplotlib
+netCDF4
+jupyter
+pika
+folium
+pandas

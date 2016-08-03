@@ -1,0 +1,8 @@
+
+jupyterlab:
+  build: ./jupyterlab
+  ports:
+    - "8888:8888"
+  volumes:
+    - ./data:/opt/app/data
+  entrypoint: sh -c 'jupyter lab --ip=* --port=8888 --no-browser --notebook-dir=/opt/app/data'
