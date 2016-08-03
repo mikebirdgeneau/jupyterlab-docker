@@ -1,0 +1,11 @@
+language: generic
+sudo: required
+services:
+- docker
+before_install:
+- make refresh-all
+script:
+- make build-test-all
+notifications:
+  slack:
+    secure: WGAQm6YHOTfNjhmUXvGi1hW7+1Uv8pqHHApb6SX1rSh0lrVNoySUwx0+U3zdRMIY41pP+k+QicVjkf+ZBP+mU3BD4Gmohn6udj5ClG0a7xO2BdFrKZVOCNh6nlh0OP9oLQGMSa26wk8HV18tD6BwDP0OFERhRmi0oX3HS1nU8wQpKvN09izxUnuGO1FzFHjwLKs/Bn/UqYlB5Sb1Bk/DB7WMCuRYbydUNkPRfYXbdR5PVfQC2UoNQJax5cEZfYWVLjvb3W3dcMq80IVlMWXBLlZxnPyL71GUAdqwH6yvhsUfsv0jLGFnAVRYRK8+/TCdib7j1bvJBCF2tl1rkz91D73kfVgear0MMzuJliRBs3xwaTKIv9SL6dJMgh3ZQSEIsW9ZdQXMRXuz+cIKQOlx2FkjBuDdsfIojuaOstVFncNxf/ucWVgiTidrX1pGcfbnjlS8d2QeAm/vQLOyNE+mBTrWZ0xDgYgarguzcJ7gaSB0wCnftcBqG1YNgRE1KeLA7Zob64Uci1b7v8RT/Mm7brFhOIxBen8CLam/w+dpjQ9v0ULhj3J/OCS9/EEGFJB5k/lVEyY6FVy1/j8mNtxFJW9v/EUSF4Y25Y4N/krFRYqlz7Y48Weqb6qIH/Fl4p+urW+py1X1ZBKZgrQv2bV2b2pp7/PBbVDiaHOulia8zjw=
