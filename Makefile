@@ -13,7 +13,7 @@ GIT_MASTER_HEAD_SHA:=$(shell git rev-parse --short=12 --verify HEAD)
 
 help:
 # http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
-	@echo "mikebirdgeneau/jupyterlab-docker"
+	@echo "mikebirdgeneau/jupyterlab"
 	@echo "====================="
 	@echo "Replace % with a stack directory name (e.g., make build/jupyter)\n"
 	@grep -E '^[a-zA-Z0-9_%/-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
