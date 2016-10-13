@@ -32,7 +32,7 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/
 ENV LANG=C.UTF-8
 
 # Install Python Packages & Requirements (Done near end to avoid invalidating cache)
-ADD requirements.txt requirements.txt
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # Expose Jupyter port & cmd
