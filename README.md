@@ -5,3 +5,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/mikebirdgeneau/jupyterlab-docker.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/mikebirdgeneau/jupyterlab-docker/)
 
 Jupyterlab Docker image
+
+This image is configured as an automated build on Docker Hub: [https://hub.docker.com/r/mikebirdgeneau/jupyterlab/](https://hub.docker.com/r/mikebirdgeneau/jupyterlab/).
+
+You can pull the lastest automated build using the docker pull command: `docker pull mikebirdgeneau/jupyterlab` or clone this repository and build the image locally using `docker-compse build`. 
